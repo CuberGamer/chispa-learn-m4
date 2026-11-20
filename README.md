@@ -8,7 +8,6 @@ App web para estudiar un tema contrarreloj y explicarlo con tus palabras. Aprend
 
 https://chispa-learn.lovable.app
 
-> Usá esta URL, no `hispa-study-buddy.lovable.app`: esa es una versión vieja conectada a otra base de datos, donde la cuenta demo no existe.
 
 | Cuenta demo | |
 |---|---|
