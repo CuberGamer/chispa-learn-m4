@@ -1,39 +1,21 @@
 # Chispa Learn
 
-> **Esta es una copia de trabajo** creada para aplicar la metodología del Módulo 4 (Stage 2). El repositorio original no fue modificado.
+App web para estudiar un tema contrarreloj y explicarlo con tus palabras. Aprender enseñando, con rachas, logros y una mascota.
 
-## Documentación del proyecto
+## 🚀 Probar la app
 
-| Archivo | Para qué sirve |
-|---|---|
-| [`SPEC.md`](SPEC.md) | **Fuente de verdad**: reglas `RN`, historias `HU` y criterios de aceptación. |
-| [`PLAN.md`](PLAN.md) | Arquitectura: dónde vive cada regla, tablas y partes difíciles. |
-| [`TAS.md`](TAS.md) | Tareas ordenadas por dependencias, con agente, reglas y estado. |
-| [`AGENTS.md`](AGENTS.md) | Reglamento del equipo y los seis agentes (`.cursor/rules/`). |
-| [`documentos/idea.md`](documentos/idea.md) | Idea original, problema, usuarios y alcance. |
-| [`documentos/decisiones.md`](documentos/decisiones.md) | Decisiones `Dxx` con fecha y impacto. |
-| [`documentos/glosario.md`](documentos/glosario.md) | Definiciones de términos del dominio. |
-| [`documentos/preguntas-abiertas.md`](documentos/preguntas-abiertas.md) | Dudas pendientes ordenadas por impacto. |
-| [`.env.example`](.env.example) | Nombres de variables de entorno, sin valores. |
+### Opción 1 — Online (sin instalar nada)
 
-**Regla de oro:** si algo cambia, primero se actualiza la documentación fuente y el SPEC, y después el código. Los secretos nunca se versionan.
+https://hispa-study-buddy.lovable.app
 
----
-
-## Cómo probar la app (cuenta demo)
-
-App desplegada: https://hispa-study-buddy.lovable.app
-
-| Campo | Valor |
+| Cuenta demo | |
 |---|---|
 | Email | `rvqacqiu@guerrillamailblock.com` |
 | Contraseña | `ChispaDemo2026!` |
 
-> **Cuenta solo para pruebas.** El email es un buzón temporal: no sirve para recuperar la contraseña. No cargues datos personales ni uses esta cuenta como administrador. Si el repo es público, cualquiera puede entrar con estas credenciales; para un entorno real, creá una cuenta propia y no publiques contraseñas.
+### Opción 2 — En local
 
-### Probar en local (sin crear ninguna cuenta)
-
-El archivo `.env.example` ya trae la URL y la clave **pública** de Supabase, así que el proyecto funciona al clonarlo sin configurar nada:
+Requisitos: **Node.js 20 o superior** y npm.
 
 ```bash
 # 1. Copiar la configuración pública
@@ -46,11 +28,33 @@ npm install                   # Windows si npm está bloqueado: npm.cmd install
 npm run dev
 ```
 
-Abrí la URL que muestra la terminal (normalmente `http://localhost:3000` o `http://localhost:5173`) e iniciá sesión con la cuenta demo de arriba.
+Abrí la URL que muestra la terminal (normalmente `http://localhost:3000` o `http://localhost:5173`) e iniciá sesión con la cuenta demo.
 
-- Las claves `publishable` de Supabase son públicas por diseño; la seguridad real la aplican las políticas RLS de la base.
-- **No** se incluyen los secretos (`SUPABASE_SERVICE_ROLE_KEY`, `LOVABLE_API_KEY`, cron). Sin ellos funciona el login y el flujo principal; la generación de temas con IA queda deshabilitada.
-- Si querés usar tu propio Supabase, reemplazá los valores de `.env` por los de tu panel.
+**No hace falta crear ninguna cuenta ni configurar nada:** `.env.example` ya trae la URL y la clave **pública** de Supabase. Las claves `publishable` son públicas por diseño; la seguridad real la aplican las políticas RLS. No se incluyen secretos (`SUPABASE_SERVICE_ROLE_KEY`, `LOVABLE_API_KEY`, cron): el login y el flujo principal funcionan, la generación de temas con IA queda deshabilitada. Si querés usar tu propio Supabase, reemplazá los valores de `.env`.
+
+> **Cuenta solo para pruebas.** El email es un buzón temporal: no sirve para recuperar la contraseña. No cargues datos personales. Si el repo es público, cualquiera puede entrar con estas credenciales; para producción, creá una cuenta propia y no publiques contraseñas.
+
+---
+
+## Documentación
+
+| Archivo | Para qué sirve |
+|---|---|
+| [`SPEC.md`](SPEC.md) | **Fuente de verdad**: reglas `RN`, historias `HU` y criterios de aceptación. |
+| [`PLAN.md`](PLAN.md) | Arquitectura: dónde vive cada regla, tablas y partes difíciles. |
+| [`TAS.md`](TAS.md) | Tareas ordenadas por dependencias, con agente, reglas y estado. |
+| [`AGENTS.md`](AGENTS.md) | Reglamento del equipo y los seis agentes (`.cursor/rules/`). |
+| [`documentos/idea.md`](documentos/idea.md) | Idea original, problema, usuarios y alcance. |
+| [`documentos/decisiones.md`](documentos/decisiones.md) | Decisiones `Dxx` con fecha y impacto. |
+| [`documentos/glosario.md`](documentos/glosario.md) | Definiciones de términos del dominio. |
+| [`documentos/preguntas-abiertas.md`](documentos/preguntas-abiertas.md) | Dudas pendientes ordenadas por impacto. |
+| [`.env.example`](.env.example) | Configuración pública de Supabase para probar en local. |
+
+## Sobre esta copia
+
+> **Esta es una copia de trabajo** creada para aplicar la metodología del Módulo 4 (Stage 2). El repositorio original no fue modificado.
+
+**Regla de oro:** si algo cambia, primero se actualiza la documentación fuente y el SPEC, y después el código. Los secretos nunca se versionan.
 
 ---
 
