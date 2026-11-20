@@ -2,8 +2,6 @@
 
 App web para estudiar un tema contrarreloj y explicarlo con tus palabras. Aprender enseñando, con rachas, logros y una mascota.
 
-> Atajo: abrí [`abrir-repo.html`](abrir-repo.html) para ir directo al repositorio en GitHub.
-
 ## 🚀 Probar la app
 
 ### Opción 1 — Online (sin instalar nada)
