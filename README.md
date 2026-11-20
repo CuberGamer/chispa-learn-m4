@@ -31,6 +31,27 @@ App desplegada: https://hispa-study-buddy.lovable.app
 
 > **Cuenta solo para pruebas.** El email es un buzón temporal: no sirve para recuperar la contraseña. No cargues datos personales ni uses esta cuenta como administrador. Si el repo es público, cualquiera puede entrar con estas credenciales; para un entorno real, creá una cuenta propia y no publiques contraseñas.
 
+### Probar en local (sin crear ninguna cuenta)
+
+El archivo `.env.example` ya trae la URL y la clave **pública** de Supabase, así que el proyecto funciona al clonarlo sin configurar nada:
+
+```bash
+# 1. Copiar la configuración pública
+cp .env.example .env          # Windows: Copy-Item .env.example .env
+
+# 2. Instalar dependencias
+npm install                   # Windows si npm está bloqueado: npm.cmd install
+
+# 3. Iniciar el servidor
+npm run dev
+```
+
+Abrí la URL que muestra la terminal (normalmente `http://localhost:3000` o `http://localhost:5173`) e iniciá sesión con la cuenta demo de arriba.
+
+- Las claves `publishable` de Supabase son públicas por diseño; la seguridad real la aplican las políticas RLS de la base.
+- **No** se incluyen los secretos (`SUPABASE_SERVICE_ROLE_KEY`, `LOVABLE_API_KEY`, cron). Sin ellos funciona el login y el flujo principal; la generación de temas con IA queda deshabilitada.
+- Si querés usar tu propio Supabase, reemplazá los valores de `.env` por los de tu panel.
+
 ---
 
 # Chispa — Documentación Funcional y Técnica
