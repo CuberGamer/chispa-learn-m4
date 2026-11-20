@@ -20,6 +20,19 @@
 
 ---
 
+## Cómo probar la app (cuenta demo)
+
+App desplegada: https://hispa-study-buddy.lovable.app
+
+| Campo | Valor |
+|---|---|
+| Email | `rvqacqiu@guerrillamailblock.com` |
+| Contraseña | `ChispaDemo2026!` |
+
+> **Cuenta solo para pruebas.** El email es un buzón temporal: no sirve para recuperar la contraseña. No cargues datos personales ni uses esta cuenta como administrador. Si el repo es público, cualquiera puede entrar con estas credenciales; para un entorno real, creá una cuenta propia y no publiques contraseñas.
+
+---
+
 # Chispa — Documentación Funcional y Técnica
 
 > Documento de referencia para que una IA (o vos mismo con ayuda de una IA) programe la aplicación paso a paso, fase por fase.
