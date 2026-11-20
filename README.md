@@ -30,7 +30,7 @@ npm install                   # Windows si npm está bloqueado: npm.cmd install
 npm run dev
 ```
 
-Abrí la URL que muestra la terminal (normalmente `http://localhost:3000` o `http://localhost:5173`) e iniciá sesión con la cuenta demo.
+Abrí la URL que muestra la terminal (en este proyecto, `http://localhost:8080`) e iniciá sesión con la cuenta demo.
 
 **No hace falta crear ninguna cuenta ni configurar nada:** `.env.example` ya trae la URL y la clave **pública** de Supabase. Las claves `publishable` son públicas por diseño; la seguridad real la aplican las políticas RLS. No se incluyen secretos (`SUPABASE_SERVICE_ROLE_KEY`, `LOVABLE_API_KEY`, cron): el login y el flujo principal funcionan, la generación de temas con IA queda deshabilitada. Si querés usar tu propio Supabase, reemplazá los valores de `.env`.
 
@@ -49,12 +49,13 @@ Abrí la URL que muestra la terminal (normalmente `http://localhost:3000` o `htt
 | [`documentos/idea.md`](documentos/idea.md) | Idea original, problema, usuarios y alcance. |
 | [`documentos/decisiones.md`](documentos/decisiones.md) | Decisiones `Dxx` con fecha y impacto. |
 | [`documentos/glosario.md`](documentos/glosario.md) | Definiciones de términos del dominio. |
-| [`documentos/preguntas-abiertas.md`](documentos/preguntas-abiertas.md) | Dudas pendientes ordenadas por impacto. |
+| [`documentos/preguntas-abiertas.md`](documentos/preguntas-abiertas.md) | Dudas registradas, con su decisión de cierre. |
+| [`INFORME_DE_PRUEBAS.md`](INFORME_DE_PRUEBAS.md) | Comandos ejecutados, resultados y verificaciones manuales. |
 | [`.env.example`](.env.example) | Configuración pública de Supabase para probar en local. |
 
-## Sobre esta copia
+## Sobre este repositorio
 
-> **Esta es una copia de trabajo** creada para aplicar la metodología del Módulo 4 (Stage 2). El repositorio original no fue modificado.
+> Repositorio de entrega de Chispa Learn: código, documentación de ingeniería y reglas de trabajo. Deploy público: https://chispa-learn.lovable.app.
 
 **Regla de oro:** si algo cambia, primero se actualiza la documentación fuente y el SPEC, y después el código. Los secretos nunca se versionan.
 
@@ -368,7 +369,7 @@ Empezar por la Fase 0 y Fase 1 tal como están descriptas acá. Este mismo docum
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://hispa-study-buddy.lovable.app
+**Live app**: https://chispa-learn.lovable.app
 
 ## Build with Lovable
 

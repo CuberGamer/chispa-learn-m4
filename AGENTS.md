@@ -11,7 +11,7 @@
 
 # Reglamento de Chispa Learn
 
-Esta es una **copia** del repositorio original, creada para aplicar la metodología del Módulo 4 sin modificar el proyecto publicado en Lovable. El repo original queda intacto.
+Este es el repositorio de entrega de Chispa Learn. La aplicación publicada en https://chispa-learn.lovable.app es el deploy de producción; acá vive el código junto con la documentación de ingeniería (SPEC, PLAN, TAS y reglas de agentes).
 
 ## Fuente de verdad
 

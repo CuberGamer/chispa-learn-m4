@@ -21,6 +21,14 @@
 | D15 | Las explicaciones pueden hacerse públicas; otros usuarios pueden verlas, comentarlas, calificarlas y reportarlas. |
 | D16 | No hay corrección automática de contenido; la calidad se mide por calificación de pares. |
 | D17 | `started_at` en backend para evitar manipulación del cronómetro queda como mejora futura (no en el MVP). |
-| D18 | Hosting en Vercel; la configuración de Supabase se pasa por variables de entorno. |
+| D18 | Deploy público en Lovable; la configuración de Supabase se pasa por variables de entorno. |
 | D19 | Los secretos nunca se versionan: `.env` se ignora y se entrega `.env.example` con los nombres de variables. |
 | D20 | Toda tarea se ejecuta con el ciclo tester → desarrollador → revisor → commit; el revisor puede rechazar. |
+| D21 | El "día" de la racha es la fecha **local del usuario** en `YYYY-MM-DD` (`hoyISO`), no UTC. Cierra P01. |
+| D22 | Solo cuenta para la racha una sesión **guardada con explicación**; una sesión iniciada y abandonada no la modifica. Cierra P02. |
+| D23 | Los reportes se guardan en `content_reports` con motivo y detalle; no hay acción automática ni SLA en el MVP. Cierra P03. |
+| D24 | Una explicación puede alternarse entre pública y privada desde el historial en cualquier momento; el texto no se pierde. Cierra P04. |
+| D25 | Si el navegador no tiene Web Speech API, se muestra un aviso y se usa el campo de texto editable; no hay servicio externo de transcripción. Cierra P05. |
+| D26 | Solo se permite una sesión activa local a la vez (`chispa-sesion-activa`); iniciar otra usa la misma clave y aplica RN-12. Cierra P06. |
+| D27 | Los nombres de logros son identificadores fijos del catálogo; renombrarlos exige migración y cambio del SPEC. Cierra P07. |
+| D28 | La generación con IA no tiene cupo por usuario: depende de `LOVABLE_API_KEY` en servidor; sin clave falla en servidor y queda deshabilitada en local. Cierra P08. |

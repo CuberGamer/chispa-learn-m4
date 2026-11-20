@@ -94,9 +94,7 @@ describe("logrosNuevos", () => {
   // CASO CORRECTO
   it("devuelve solo los logros cumplidos que el usuario todavía no tiene", () => {
     const stats = { ...statsVacias, sesiones: 4, minutos: 400 };
-    expect(logrosNuevos(catalogo, ["1"], stats)).toEqual([
-      { id: "2", name: "Maratón" },
-    ]);
+    expect(logrosNuevos(catalogo, ["1"], stats)).toEqual([{ id: "2", name: "Maratón" }]);
   });
 
   // CASO INVÁLIDO: catálogo nulo

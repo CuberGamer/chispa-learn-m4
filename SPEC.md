@@ -2,7 +2,7 @@
 
 > **Fuente de verdad del proyecto.** Si el código y este documento discrepan, se corrige el código; para cambiar una regla se actualiza primero `documentos/decisiones.md` y después este archivo.
 > Versiones anteriores: commit inicial `docs: spec 1 de chispa learn`.
-> Fuentes: `documentos/idea.md`, `documentos/decisiones.md`, `documentos/glosario.md`, `README.md` original y código existente.
+> Fuentes: `documentos/idea.md`, `documentos/decisiones.md`, `documentos/glosario.md`, `README.md` y código existente.
 
 ## 1. Objetivos
 
@@ -69,7 +69,7 @@
 - **RN-23** — Temas distintos es la cantidad de `topic_id` únicos en las sesiones del usuario.
 - **RN-24** — Los logros se evalúan con lógica pura sobre estadísticas y se guardan solo los que el usuario aún no tiene.
 - **RN-25** — Reglas de logro: *Primera chispa* ≥1 sesión; *Diez temas* ≥10 temas distintos; *Racha de 7* ≥7 (actual o máxima); *Maratón* ≥300 minutos; *Explicador* ≥1000 caracteres en la explicación más larga.
-- **RN-26** — El cálculo de rachas por día queda pendiente de definir zona horaria (P01) y de si una sesión abandonada cuenta (P02).
+- **RN-26** — La racha se actualiza solo al guardar una sesión, usando la fecha local del usuario en `YYYY-MM-DD` (D21, D22): si ya guardó hoy no cambia; si la fecha anterior es ayer suma 1; en otro caso reinicia en 1. `longest_streak` conserva el máximo. Una sesión iniciada pero abandonada no cuenta.
 
 ### Grafo de temas
 
@@ -91,6 +91,15 @@
 - **RN-36** — Los secretos (keys de Supabase service role, API key de IA, secretos de cron) se leen de variables de entorno; `.env` no se versiona.
 - **RN-37** — Las acciones de servidor que usan la service role no se ejecutan desde el navegador.
 - **RN-38** — Toda tarea se ejecuta con el ciclo tester → desarrollador → revisor → commit, y el revisor puede rechazar.
+
+### Decisiones operativas cerradas
+
+- **RN-39** — Los reportes de contenido se guardan con motivo y detalle; no hay acción automática ni plazo de revisión en el MVP (D23).
+- **RN-40** — La visibilidad de una explicación puede alternarse entre pública y privada desde el historial sin perder el texto (D24).
+- **RN-41** — Si el navegador no expone Web Speech API, el dictado se deshabilita con un aviso y la explicación se escribe a mano (D25).
+- **RN-42** — Solo existe una sesión activa local a la vez, bajo la clave `chispa-sesion-activa` (D26).
+- **RN-43** — Los nombres de logros son identificadores fijos del catálogo; cambiarlos requiere migración y actualización del SPEC (D27).
+- **RN-44** — La generación con IA no tiene cupo por usuario: depende de `LOVABLE_API_KEY` en servidor y falla allí si la clave falta (D28).
 
 ## 5. Historias de usuario y criterios de aceptación
 
@@ -142,6 +151,6 @@
 - Logro ya obtenido → no volver a insertarlo (RN-24).
 - API key de IA ausente → fallar en servidor, nunca en cliente (RN-36).
 
-## 7. Pendientes
+## 7. Estado de pendientes
 
-Ver `documentos/preguntas-abiertas.md`: P01 y P02 bloquean la definición completa de rachas; el resto son mejoras o límites a confirmar.
+Sin pendientes. Las preguntas P01 a P08 se cerraron con las decisiones D21 a D28 en `documentos/decisiones.md` y se reflejan en RN-26 y RN-39 a RN-44.
